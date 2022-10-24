@@ -1,27 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const cliente = require('../models/cliente')
-router.get('/cliente',(req,res) =>{
-    res.send('Ruta get cliente')
-})
+const ctrCliente = require('../controllers/ctrCliente')
+//Create
+router.post('/cliente', ctrCliente.guardar)
 
-router.post('/cliente',(req,res) =>{
-    cliente(req.body)
-    .save()
-    .then(data=>{
-        res.json(data)
-    })
-    .catch(err=>{
-        res.json(err)
-    })
-})
+//Read
+router.get('/cliente',ctrCliente.buscar)
 
+//Update
 router.put('/cliente',(req,res) =>{
     res.send('Ruta put cliente')
 })
-
-router.delete('/cliente',(req,res) =>{
-    res.send('Ruta delete cliente')
-})
+// Eliminar
+router.delete('/cliente/:id',ctrCliente.eliminar)
 
 module.exports = router;
