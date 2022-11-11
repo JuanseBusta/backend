@@ -4,7 +4,7 @@
   "description": "Proyecto para la gestión de una tienda virtual para mascotas",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",

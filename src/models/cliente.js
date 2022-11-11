@@ -4,7 +4,8 @@ const clienteSchema = new mongoose.Schema({
     nombre: {type:String, required:true},
     celular: {type:Number, default:300},
     email:{ type: String, required:true},
-    nacimiento:{type:Date, default: Date.now()}
+    nacimiento:{type:Date, default: Date.now()},
+    direccion:{type:String, required:true}
 },{
     timestamps: true,
     versionkey: false
