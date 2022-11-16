@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const tipoSchema = new mongoose.Schema({
-    nombre:{type: String, requiered: true},
+    nombre:{type: String},
     descripción:{type: String},
     
   },{
